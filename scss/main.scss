@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
+
+body {
+  background-image: url("/assets/images/bg-img.png");
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+div.vote-section {
+  background: #ffffff;
+  border-radius: 9px;
+  width: 66%;
+  margin: 66px auto 0;
+  padding: 24px 36px 34px;
+  min-height: 100vh;
+
+  @media screen and (max-width: 940px) {
+    width: 70%;
+  }
+
+  header {
+    background: #232b3d;
+    border-radius: 8px;
+    padding: 36px 27px 21px;
+    margin-bottom: 50px;
+    color: white;
+
+    h1 {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 21px;
+      text-align: center;
+      margin: 0;
+      @media screen and (max-width: 375px) {
+        font-size: 12px;
+      }
+    }
+
+    h2 {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 65px;
+      line-height: 76px;
+      text-align: center;
+      opacity: 0.6;
+      margin: 0 0 25px;
+
+      @media screen and (max-width: 375px) {
+        font-size: 50px;
+        line-height: 60px;
+      }
+    }
+
+    .meter { 
+      height: 11px;
+      position: relative;
+      background: #555;
+      border-radius: 22px;
+      // padding: 5px;
+      box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3);
+      // box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+      span {
+        display: block;
+        height: 100%;
+        border-top-right-radius: 22px;
+        border-bottom-right-radius: 22px;
+        border-top-left-radius: 22px;
+        border-bottom-left-radius: 22px;
+        background-color: #F7B354;
+        background-image: linear-gradient(
+          center bottom,
+          #F7B354 37%,
+          #f3bf77 69%
+        );
+        box-shadow: 
+          inset 0 2px 9px  rgba(255,255,255,0.3),
+          inset 0 -2px 6px rgba(0,0,0,0.4);
+        position: relative;
+        overflow: hidden;
+      }
+    }
+  }
+
+  div.candidate-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 5%;
+    margin-bottom: 20px;
+
+    @media screen and (max-width: 700px) {
+      grid-template-columns: 1fr;
+      // grid-row-gap: 5%;
+    }
+
+    > div {
+      border: 1px solid rgba(0, 0, 0, 0.09);
+      box-sizing: border-box;
+      border-radius: 7px;
+      padding: 15px 15px 26px;
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 51px;
+      @media screen and (max-width: 700px) {
+        margin-bottom: 40px;
+      }
+
+      > div {
+        margin-left: 31px;
+        h4 {
+          font-style: normal;
+          font-weight: bold;
+          font-size: 18px;
+          line-height: 21px;
+          color: #000000;
+          margin: 0 0 24px;
+        }
+        .btn-group {
+          display: flex;
+          button {
+            width: 40%;
+            height: 34px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            background-color: white;
+            box-sizing: border-box;
+
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 21px;
+            text-align: center;
+            color: #000000;
+          }
+
+          button:first-child {
+            border-radius: 7px 0 0 7px;
+          }
+
+          span {
+            display: flex;
+            width: 59px;
+            justify-content: center;
+            align-items: center;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 21px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-left: none;
+            border-right: none;
+          }
+
+          button:last-child {
+            border-radius: 0 7px 7px 0;
+          }
+        }
+      }
+    }
+  }
+
+  div.action-btn {
+    text-align: center;
+    button {
+      background: #1e2a5a;
+      border-radius: 10px;
+      border: 0;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 21px;
+      color: white;
+      padding: 14px 62px;
+
+      @media screen and (max-width: 700px) {
+        padding: 14px 30px;
+      }
+    }
+    span {
+      display: block;
+      margin-top: 18px;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 21px;
+      text-align: center;
+      color: #ee1a30;
+    }
+  }
+}
