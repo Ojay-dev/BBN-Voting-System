@@ -96,7 +96,7 @@ div.vote-section {
       overflow: hidden;
       border-radius: 50%;
 
-      @media screen and (max-width: 280px){
+      @media screen and (max-width: 280px) {
         width: 50px;
         height: 50px;
       }
@@ -122,9 +122,8 @@ div.vote-section {
 
       > div {
         margin-right: 31px;
-        @media screen and (max-width:375px) {
-        margin-right: 10px;
-          
+        @media screen and (max-width: 375px) {
+          margin-right: 10px;
         }
         h4 {
           font-style: normal;
@@ -218,10 +217,20 @@ div.vote-section {
       }
     }
   }
-
+  span.evicted {
+    display: block;
+    text-align: center;
+    margin-bottom: 60px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 30px;
+    text-align: center;
+    color: #18bbb6;
+  }
   div.action-btn {
     text-align: center;
-    button {
+    a, button {
       background: #1e2a5a;
       border-radius: 10px;
       border: 0;
@@ -231,6 +240,7 @@ div.vote-section {
       line-height: 21px;
       color: white;
       padding: 14px 62px;
+      text-decoration: none;
 
       @media screen and (max-width: 700px) {
         padding: 14px 30px;

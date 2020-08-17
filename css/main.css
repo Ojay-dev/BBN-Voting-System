@@ -277,11 +277,23 @@ div.vote-section div.candidate-section div.leaderboard span {
   }
 }
 
+div.vote-section span.evicted {
+  display: block;
+  text-align: center;
+  margin-bottom: 60px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 30px;
+  text-align: center;
+  color: #18bbb6;
+}
+
 div.vote-section div.action-btn {
   text-align: center;
 }
 
-div.vote-section div.action-btn button {
+div.vote-section div.action-btn a, div.vote-section div.action-btn button {
   background: #1e2a5a;
   border-radius: 10px;
   border: 0;
@@ -291,10 +303,11 @@ div.vote-section div.action-btn button {
   line-height: 21px;
   color: white;
   padding: 14px 62px;
+  text-decoration: none;
 }
 
 @media screen and (max-width: 700px) {
-  div.vote-section div.action-btn button {
+  div.vote-section div.action-btn a, div.vote-section div.action-btn button {
     padding: 14px 30px;
   }
 }
