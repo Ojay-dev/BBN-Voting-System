@@ -78,9 +78,9 @@ div.vote-section header .meter span {
   border-bottom-right-radius: 22px;
   border-top-left-radius: 22px;
   border-bottom-left-radius: 22px;
-  background-color: #F7B354;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(bottom, center), color-stop(37%, #F7B354), color-stop(69%, #f3bf77));
-  background-image: linear-gradient(center bottom, #F7B354 37%, #f3bf77 69%);
+  background-color: #f7b354;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(bottom, center), color-stop(37%, #f7b354), color-stop(69%, #f3bf77));
+  background-image: linear-gradient(center bottom, #f7b354 37%, #f3bf77 69%);
   -webkit-box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.3), inset 0 -2px 6px rgba(0, 0, 0, 0.4);
           box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.3), inset 0 -2px 6px rgba(0, 0, 0, 0.4);
   position: relative;
@@ -96,11 +96,33 @@ div.vote-section div.candidate-section {
   margin-bottom: 20px;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
   div.vote-section div.candidate-section {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
+}
+
+div.vote-section div.candidate-section .image-cropper {
+  width: 67px;
+  height: 67px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 280px) {
+  div.vote-section div.candidate-section .image-cropper {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+div.vote-section div.candidate-section .image-cropper .img {
+  display: inline;
+  margin: 0 auto;
+  height: 100%;
+  width: auto;
 }
 
 div.vote-section div.candidate-section > div {
@@ -125,7 +147,13 @@ div.vote-section div.candidate-section > div {
 }
 
 div.vote-section div.candidate-section > div > div {
-  margin-left: 31px;
+  margin-right: 31px;
+}
+
+@media screen and (max-width: 375px) {
+  div.vote-section div.candidate-section > div > div {
+    margin-right: 10px;
+  }
 }
 
 div.vote-section div.candidate-section > div > div h4 {
@@ -186,6 +214,69 @@ div.vote-section div.candidate-section > div > div .btn-group button:last-child 
   border-radius: 0 7px 7px 0;
 }
 
+div.vote-section div.candidate-section div.leaderboard {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+div.vote-section div.candidate-section div.leaderboard div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+}
+
+div.vote-section div.candidate-section div.leaderboard div h4 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+  margin: 0 14px;
+}
+
+@media screen and (max-width: 375px) {
+  div.vote-section div.candidate-section div.leaderboard div h4 {
+    font-size: 16px;
+  }
+}
+
+div.vote-section div.candidate-section div.leaderboard span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+  color: white;
+  background: #1e2a5a;
+}
+
+@media screen and (max-width: 375px) {
+  div.vote-section div.candidate-section div.leaderboard span {
+    width: 40px;
+    height: 40px;
+  }
+}
+
 div.vote-section div.action-btn {
   text-align: center;
 }
@@ -217,5 +308,14 @@ div.vote-section div.action-btn span {
   line-height: 21px;
   text-align: center;
   color: #ee1a30;
+}
+
+div.vote-section h1.leaderboard {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 29px;
+  text-align: center;
+  color: #000000;
 }
 /*# sourceMappingURL=main.css.map */
